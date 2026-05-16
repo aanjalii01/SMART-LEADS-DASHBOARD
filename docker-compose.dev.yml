@@ -1,0 +1,31 @@
+version: '3.9'
+
+# Development overrides — use with:
+# docker compose -f docker-compose.yml -f docker-compose.dev.yml up
+
+services:
+  mongo:
+    ports:
+      - '27017:27017'
+
+  backend:
+    build:
+      target: builder
+    command: npm run dev
+    volumes:
+      - ./backend/src:/app/src
+    environment:
+      NODE_ENV: development
+    ports:
+      - '5000:5000'
+
+  frontend:
+    build:
+      target: builder
+    command: npm run dev -- --host
+    volumes:
+      - ./frontend/src:/app/src
+    environment:
+      VITE_API_URL: http://localhost:5000/api
+    ports:
+      - '3000:3000'
