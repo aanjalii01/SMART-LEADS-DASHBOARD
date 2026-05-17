@@ -1,6 +1,5 @@
-import { Users, TrendingUp, Target, XCircle } from 'lucide-react';
-import { StatsData } from '../../types';
-import { Spinner } from '../ui';
+import { Users, TrendingUp, Target, XCircle } from "lucide-react";
+import { StatsData } from "../../types";
 
 interface StatsCardsProps {
   stats?: StatsData;
@@ -8,10 +7,10 @@ interface StatsCardsProps {
 }
 
 const STATUS_META = [
-  { key: 'New', icon: Users, color: 'text-blue-600 bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400' },
-  { key: 'Contacted', icon: TrendingUp, color: 'text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400' },
-  { key: 'Qualified', icon: Target, color: 'text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400' },
-  { key: 'Lost', icon: XCircle, color: 'text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400' },
+  { key: "New", icon: Users, color: "text-blue-600 bg-blue-100 dark:bg-blue-900/30 dark:text-blue-400" },
+  { key: "Contacted", icon: TrendingUp, color: "text-yellow-600 bg-yellow-100 dark:bg-yellow-900/30 dark:text-yellow-400" },
+  { key: "Qualified", icon: Target, color: "text-green-600 bg-green-100 dark:bg-green-900/30 dark:text-green-400" },
+  { key: "Lost", icon: XCircle, color: "text-red-600 bg-red-100 dark:bg-red-900/30 dark:text-red-400" },
 ];
 
 export function StatsCards({ stats, isLoading }: StatsCardsProps) {
