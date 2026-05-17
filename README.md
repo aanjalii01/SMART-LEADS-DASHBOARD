@@ -1,6 +1,7 @@
 # 🚀 Smart Leads Dashboard
 
-A full-stack **Lead Management Dashboard** built with the MERN stack (MongoDB, Express, React, Node.js) using TypeScript throughout.
+
+> A full-stack **Lead Management Dashboard** built with the MERN stack (MongoDB, Express, React, Node.js) using TypeScript throughout — featuring JWT auth, RBAC, advanced filtering, pagination, CSV export, and dark mode.
 
 ---
 
@@ -88,7 +89,7 @@ smart-leads-dashboard/
 
 ```bash
 # Clone the repo
-git clone https://github.com/YOUR_USERNAME/smart-leads-dashboard.git
+git clone https://github.com/anjalisinha/smart-leads-dashboard.git
 cd smart-leads-dashboard
 
 # Start all services
@@ -131,11 +132,13 @@ npm run dev                # Runs on http://localhost:3000
 ```env
 NODE_ENV=development
 PORT=5000
-MONGODB_URI=mongodb://localhost:27017/smart-leads
+MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.xxxxx.mongodb.net/smart-leads?retryWrites=true&w=majority&appName=Cluster0
 JWT_SECRET=your_super_secret_key_here
 JWT_EXPIRES_IN=7d
 FRONTEND_URL=http://localhost:3000
 ```
+
+> **Note:** Replace `<username>`, `<password>`, and `cluster0.xxxxx` with your actual MongoDB Atlas credentials. If your password contains special characters like `@`, encode them — e.g. `@` becomes `%40`.
 
 ### Frontend (`frontend/.env`)
 
@@ -227,5 +230,6 @@ docker compose down -v
 
 ## 📬 Submission
 
-Send to: **ritik.yadav@servicehive.tech**  
-Subject: `MERN Internship Assignment Submission - Your Name`
+**Name:** Anjali Sinha  
+**Email:** ritik.yadav@servicehive.tech  
+**Subject:** `MERN Internship Assignment Submission - Anjali Sinha`
